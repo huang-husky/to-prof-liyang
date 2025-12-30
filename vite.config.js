@@ -1,14 +1,11 @@
 import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import vueDevTools from 'vite-plugin-vue-devtools'
 
-// https://vite.dev/config/
 export default defineConfig({
+  base: '/to-prof-liyang/',  // 重要！必须加这行
   plugins: [
     vue(),
-    // vueDevTools(),  // 把这行注释掉或删除
   ],
   resolve: {
     alias: {
