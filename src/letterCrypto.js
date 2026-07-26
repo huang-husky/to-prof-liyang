@@ -1,0 +1,31 @@
+// 信件密文（PBKDF2 + AES-GCM 加密）。
+// 明文源文件：letter contexts/forLiYang/letter-content.txt
+// 更新方法：编辑明文后，在 letter contexts/forLiYang 目录运行  node update-letter.js <密码>
+// 页面本身不存密码，密码正确时才能解出明文（AES-GCM 会校验密码）。
+export const ENCRYPTED = "VTOy0nKWjVxSbzImzyzgXA==.7FFhTNemhbWDt699.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"
+
+const b64ToBuf = s => Uint8Array.from(atob(s), c => c.charCodeAt(0))
+
+// 用密码解密信件，返回段落数组。
+// 密码错误时 AES-GCM 校验失败，会抛出异常。
+export async function decryptLetter(password) {
+  const [saltB64, ivB64, ctB64] = ENCRYPTED.split('.')
+  const salt = b64ToBuf(saltB64)
+  const iv = b64ToBuf(ivB64)
+  const ct = b64ToBuf(ctB64)
+
+  const baseKey = await crypto.subtle.importKey(
+    'raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveKey']
+  )
+  const key = await crypto.subtle.deriveKey(
+    { name: 'PBKDF2', salt, iterations: 310000, hash: 'SHA-256' },
+    baseKey,
+    { name: 'AES-GCM', length: 256 },
+    false, ['decrypt']
+  )
+  const plainBuf = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ct)
+  const text = new TextDecoder().decode(plainBuf)
+
+  // 明文里段落之间用空行分隔
+  return text.split(/\n\s*\n/).map(s => s.trim()).filter(Boolean)
+}
